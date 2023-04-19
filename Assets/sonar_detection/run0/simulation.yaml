@@ -1,0 +1,5 @@
+train: C:/Users/egreuel/Desktop/marus-example/Assets\sonar_detection\run0\images\train
+val: C:/Users/egreuel/Desktop/marus-example/Assets\sonar_detection\run0\images\val
+test: C:/Users/egreuel/Desktop/marus-example/Assets\sonar_detection\run0\images\test
+nc: 0
+names: []

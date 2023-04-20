@@ -1,5 +1,94 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &485351387
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 485351388}
+  - component: {fileID: 485351391}
+  - component: {fileID: 485351390}
+  - component: {fileID: 485351389}
+  m_Layer: 0
+  m_Name: pose
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &485351388
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485351387}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5151775718769406914}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &485351391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485351387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 291295e03a2189a46808e1ca0ce8c70b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frameId: marus_boat/pose_frame
+  SampleFrequency: 10
+  debug: 1
+  Position: {x: 0, y: 0, z: 0}
+  Orientation: {x: 0, y: 0, z: 0, w: 0}
+  VerticalOffset: 0
+  LinearVelocity: {x: 0, y: 0, z: 0}
+  AngularVelocity: {x: 0, y: 0, z: 0}
+  measuredObject: {fileID: 0}
+--- !u!114 &485351390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485351387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3df58032a8e0be545ae5b06d079ef8f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpdateFrequency: 10
+  address: marus_boat/pose
+  MessageQueueSize: 10000
+--- !u!114 &485351389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485351387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fcd8a5895ee1daf39ca9ac1dc1e169d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpdateFrequency: 1
+  ParentTransform: {fileID: 5151775719288335777}
+  ParentFrameId: marus_boat/base_link
+  FrameId: marus_boat/pose_frame
+  AddOffset: 0
+  TranslationOffset: {x: 0, y: 0, z: 0}
+  RotationOffset: {x: 0, y: 0, z: 0}
 --- !u!1 &67674082627784266
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,13 +184,14 @@ GameObject:
   - component: {fileID: 1762786082114768825}
   - component: {fileID: 6371229191980587117}
   - component: {fileID: 666937732361807922}
+  - component: {fileID: 2004654693}
   m_Layer: 0
   m_Name: sonar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5027534346361454649
 Transform:
   m_ObjectHideFlags: 0
@@ -110,7 +200,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 302915533329071869}
   m_LocalRotation: {x: 0.2588191, y: 0, z: 0, w: 0.9659258}
-  m_LocalPosition: {x: -0, y: -0, z: 2.052}
+  m_LocalPosition: {x: 0, y: 0, z: 1.908}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -187,6 +277,29 @@ MonoBehaviour:
   AddOffset: 0
   TranslationOffset: {x: 0, y: 0, z: 0}
   RotationOffset: {x: 0, y: 0, z: 0}
+--- !u!114 &2004654693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302915533329071869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f42de25da64c1d435bbb65aa23367ffc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enable: 0
+  ResumeFromLastTime: 1
+  ObjectClasses: []
+  SaveFrequencyHz: 1
+  IntensityThreshold: 0.5
+  DatasetFolder: 
+  GenerateTestSubset: 1
+  BackgroundImageSaveProbability: 0.05
+  TrainSize: 82
+  ValSize: 3
+  TestSize: 15
 --- !u!1 &3606686916027938080
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,7 +392,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5151775718573208651}
-  - component: {fileID: 5151775718573208650}
+  - component: {fileID: 53501927}
   m_Layer: 0
   m_Name: port
   m_TagString: Untagged
@@ -302,7 +415,7 @@ Transform:
   m_Father: {fileID: 5151775718599147162}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5151775718573208650
+--- !u!114 &53501927
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -311,13 +424,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5151775718573208648}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 001ace28518ec9f4db7c9aa58df1121c, type: 3}
+  m_Script: {fileID: 11500000, guid: 18012c9d42f74b232875646268a9808d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  voltage: 22
-  forceLatchTime: 0.2
-  lastForceRequest: 0
-  timeSinceForceRequest: 0
+  LastForceRequest: 0
+  TimeSinceForceRequest: 0
+  ThrusterAsset: {fileID: 11400000, guid: 93ab120ac8cd6a4ee8d5be077899e471, type: 2}
 --- !u!1 &5151775718599147160
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,9 +478,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrusters:
-  - {fileID: 5151775718573208650}
-  - {fileID: 5151775720178495046}
-  - {fileID: 5151775720013432416}
+  - {fileID: 53501927}
+  - {fileID: 53501926}
+  - {fileID: 53501925}
 --- !u!1 &5151775718661174648
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,7 +501,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5151775718661174651
 Transform:
   m_ObjectHideFlags: 0
@@ -479,6 +591,7 @@ MonoBehaviour:
   taaMotionVectorRejection: 0
   taaAntiHistoryRinging: 0
   taaBaseBlendFactor: 0.875
+  taaJitterScale: 1
   physicalParameters:
     m_Iso: 200
     m_ShutterSpeed: 0.005
@@ -660,6 +773,7 @@ Transform:
   - {fileID: 5151775720007779568}
   - {fileID: 5151775720091283018}
   - {fileID: 5027534346361454649}
+  - {fileID: 485351388}
   m_Father: {fileID: 5151775719288335777}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -681,7 +795,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5151775718942468905
 Transform:
   m_ObjectHideFlags: 0
@@ -863,10 +977,10 @@ MonoBehaviour:
     RayIntervals: []
   - Name: Pandar64
     Type: 2
-    Frequency: 5
-    FrameId: marus_boat/lidar_frame
+    Frequency: 20
+    FrameId: lidar_frame
     MaxRange: 230
-    MinRange: 0.3
+    MinRange: 3
     HorizontalResolution: 1024
     VerticalResolution: 64
     HorizontalFieldOfView: 360
@@ -1195,7 +1309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29ccdfeb4314f325ea4b221baa8fae2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UpdateFrequency: 5
+  UpdateFrequency: 15
   address: marus_boat/lidar
   MessageQueueSize: 10000
 --- !u!114 &5151775718942468904
@@ -1237,7 +1351,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5151775718962511212
 Transform:
   m_ObjectHideFlags: 0
@@ -1327,6 +1441,7 @@ MonoBehaviour:
   taaMotionVectorRejection: 0
   taaAntiHistoryRinging: 0
   taaBaseBlendFactor: 0.875
+  taaJitterScale: 1
   physicalParameters:
     m_Iso: 200
     m_ShutterSpeed: 0.005
@@ -1488,6 +1603,7 @@ GameObject:
   - component: {fileID: 5151775719215806988}
   - component: {fileID: 7547783837108099281}
   - component: {fileID: 40290992440182186}
+  - component: {fileID: 5564273338835770170}
   m_Layer: 0
   m_Name: marus_boat
   m_TagString: Vehicle
@@ -1594,9 +1710,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eafff3c8df241d46864e825d792cabc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  linSpeed: 2
-  rotSpeed: 5
-  vehId: veh
   thrusterController: {fileID: 5151775718599147163}
 --- !u!114 &7547783837108099281
 MonoBehaviour:
@@ -1625,6 +1738,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   linSpeed: 2
   rotSpeed: 20
+--- !u!114 &5564273338835770170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5151775719215806989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21ac7db5ea94ea64ea1299145f7d99a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snapCam: {fileID: 0}
 --- !u!1 &5151775719277042614
 GameObject:
   m_ObjectHideFlags: 0
@@ -1645,7 +1771,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5151775719277042609
 Transform:
   m_ObjectHideFlags: 0
@@ -1735,6 +1861,7 @@ MonoBehaviour:
   taaMotionVectorRejection: 0
   taaAntiHistoryRinging: 0
   taaBaseBlendFactor: 0.875
+  taaJitterScale: 1
   physicalParameters:
     m_Iso: 200
     m_ShutterSpeed: 0.005
@@ -1900,7 +2027,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5151775719288335788
 Transform:
   m_ObjectHideFlags: 0
@@ -1990,6 +2117,7 @@ MonoBehaviour:
   taaMotionVectorRejection: 0
   taaAntiHistoryRinging: 0
   taaBaseBlendFactor: 0.875
+  taaJitterScale: 1
   physicalParameters:
     m_Iso: 200
     m_ShutterSpeed: 0.005
@@ -2182,7 +2310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frameId: marus_boat/gps_frame
-  SampleFrequency: 10
+  SampleFrequency: 200
   measurementNoise:
     ParameterKeys: []
     ParameterValues: []
@@ -2209,7 +2337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa71f18ad7bb8c941999a7923c5cc39f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UpdateFrequency: 10
+  UpdateFrequency: 50
   address: marus_boat/gps
   MessageQueueSize: 10000
 --- !u!114 &5151775720007779569
@@ -2240,7 +2368,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5151775720013432419}
-  - component: {fileID: 5151775720013432416}
+  - component: {fileID: 53501925}
   m_Layer: 0
   m_Name: bow
   m_TagString: Untagged
@@ -2263,7 +2391,7 @@ Transform:
   m_Father: {fileID: 5151775718599147162}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &5151775720013432416
+--- !u!114 &53501925
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2272,13 +2400,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5151775720013432417}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 001ace28518ec9f4db7c9aa58df1121c, type: 3}
+  m_Script: {fileID: 11500000, guid: 18012c9d42f74b232875646268a9808d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  voltage: 21
-  forceLatchTime: 0.2
-  lastForceRequest: 0
-  timeSinceForceRequest: 0
+  LastForceRequest: 0
+  TimeSinceForceRequest: 0
+  ThrusterAsset: {fileID: 11400000, guid: 93ab120ac8cd6a4ee8d5be077899e471, type: 2}
 --- !u!1 &5151775720091283019
 GameObject:
   m_ObjectHideFlags: 0
@@ -2299,7 +2426,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5151775720091283018
 Transform:
   m_ObjectHideFlags: 0
@@ -2505,7 +2632,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5151775720178495047}
-  - component: {fileID: 5151775720178495046}
+  - component: {fileID: 53501926}
   m_Layer: 0
   m_Name: starboard
   m_TagString: Untagged
@@ -2528,7 +2655,7 @@ Transform:
   m_Father: {fileID: 5151775718599147162}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5151775720178495046
+--- !u!114 &53501926
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2537,13 +2664,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5151775720178495044}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 001ace28518ec9f4db7c9aa58df1121c, type: 3}
+  m_Script: {fileID: 11500000, guid: 18012c9d42f74b232875646268a9808d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  voltage: 22
-  forceLatchTime: 0.2
-  lastForceRequest: 0
-  timeSinceForceRequest: 0
+  LastForceRequest: 0
+  TimeSinceForceRequest: 0
+  ThrusterAsset: {fileID: 11400000, guid: 93ab120ac8cd6a4ee8d5be077899e471, type: 2}
 --- !u!1 &5151775720298589791
 GameObject:
   m_ObjectHideFlags: 0

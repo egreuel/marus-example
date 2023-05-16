@@ -1,0 +1,3 @@
+TS 1 Velocity: 		self.vel_ts_1 = 2.0 # input for simulation to move the TS
+OS max speed: 		self.os_max_speed = 1.0 
+OS desired speed: 	self.os_des_speed = 1.0 

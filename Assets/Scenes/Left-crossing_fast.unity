@@ -1336,7 +1336,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5151775719215806989, guid: fbfcabbaad97fef468d9af5e04e1a4c5, type: 3}
       propertyPath: m_Name
-      value: marus_boat_3
+      value: marus_boat_2
       objectReference: {fileID: 0}
     - target: {fileID: 5151775719215806989, guid: fbfcabbaad97fef468d9af5e04e1a4c5, type: 3}
       propertyPath: m_IsActive
@@ -1412,7 +1412,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5151775720007779571, guid: fbfcabbaad97fef468d9af5e04e1a4c5, type: 3}
       propertyPath: address
-      value: marus_boat_3/gps
+      value: marus_boat_2/gps
       objectReference: {fileID: 0}
     - target: {fileID: 5151775720007779571, guid: fbfcabbaad97fef468d9af5e04e1a4c5, type: 3}
       propertyPath: UpdateFrequency
@@ -1836,7 +1836,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5151775719215806989, guid: fbfcabbaad97fef468d9af5e04e1a4c5, type: 3}
       propertyPath: m_Name
-      value: marus_boat_2
+      value: marus_boat_1
       objectReference: {fileID: 0}
     - target: {fileID: 5151775719277042614, guid: fbfcabbaad97fef468d9af5e04e1a4c5, type: 3}
       propertyPath: m_IsActive
@@ -1908,7 +1908,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5151775720007779571, guid: fbfcabbaad97fef468d9af5e04e1a4c5, type: 3}
       propertyPath: address
-      value: marus_boat_2/gps
+      value: marus_boat_1/gps
       objectReference: {fileID: 0}
     - target: {fileID: 5151775720007779571, guid: fbfcabbaad97fef468d9af5e04e1a4c5, type: 3}
       propertyPath: UpdateFrequency
